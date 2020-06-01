@@ -6,15 +6,21 @@
 .setting-element{
     clear: both;
 }
-/* .settings_GLOBAL{
-    color: black;
-    text-decoration: underline;
-} */
 .row{
     width: 100%;
     clear: both;
-    /* background-color: aqua; */
 }
+.setting_heading{
+    color: black;
+    text-decoration: underline;
+}
+/* Statistics panel will stay in view as user scrolls in desktop version */
+.sticky{
+    position: -webkit-sticky; /* For Safari support */
+    position: sticky;
+    top:0;
+}
+
 /* Desktop Version */
 
 /* Control Panel Elements */
@@ -40,6 +46,9 @@
 }
 
 /* Description Box */
+.dropdown_bubble{
+    margin-top: 25px;
+}
 .info_block{
     display: block;
     font-style: italic;
@@ -64,7 +73,7 @@
     display: none;
 }
 
-/* Mobile and Tablet Version */
+/* Mobile Version */
 /* 992px */
 @media screen and (max-width: 600px) {
     /* Control Panel Elements */
@@ -92,9 +101,6 @@
     }
 
     /* Description Box */
-    .dropdown_bubble{
-        margin-top: 25px;
-    }
     .mobile_slider{
         display: inline;
     }
