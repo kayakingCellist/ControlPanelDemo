@@ -1,0 +1,104 @@
+.model-placeholder{
+    background-color: cadetblue;
+    height: 400px;
+    width: 75%;
+}
+.setting-element{
+    clear: both;
+}
+/* .settings_GLOBAL{
+    color: black;
+    text-decoration: underline;
+} */
+.row{
+    width: 100%;
+    clear: both;
+    /* background-color: aqua; */
+}
+/* Desktop Version */
+
+/* Control Panel Elements */
+.form{
+    width: 100%;
+}
+.input_label{
+    width: 39%;
+    float: left;
+    left: 10px;
+}
+.input_slider{
+    width: 39%;
+}
+.input_numeric_val{
+    width: 19%;
+    float: right;
+    right: 10px;
+    clear: none;
+}
+.input_text{
+    width: 39%;
+}
+
+/* Description Box */
+.info_block{
+    display: block;
+    font-style: italic;
+    background-color: #ede9e8;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.arrow_up {
+    width: 0; 
+    height: 0; 
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    
+    border-bottom: 12px solid #ede9e8;
+    margin-left: 15px;
+  }
+.mobile_slider{
+    display: none;
+}
+.mobile_text_input{
+    display: none;
+}
+
+/* Mobile and Tablet Version */
+/* 992px */
+@media screen and (max-width: 600px) {
+    /* Control Panel Elements */
+    .input_label{
+        left: 10px;
+        width: auto;
+        float: left;
+        clear: none;
+    }
+    .input_slider{
+        display: none;
+        width: 0%;
+    }
+    .input_numeric_val{
+        position: absolute;
+        width: 20%;
+        float: right;
+        right: 10px;
+        clear: none;
+    }
+    .input_text{
+        width: 20%;
+        position: absolute;
+        right: 10px;
+    }
+
+    /* Description Box */
+    .dropdown_bubble{
+        margin-top: 25px;
+    }
+    .mobile_slider{
+        display: inline;
+    }
+    .mobile_text_input{
+        display: inline;
+    }
+  }
