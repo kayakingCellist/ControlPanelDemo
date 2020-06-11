@@ -37,90 +37,213 @@
                 <div id="GLOBAL_collapse" class="collapse show" aria-labelledby="GLOBAL_heading" data-parent="#GLOBAL_accordian">
                   <div class="card-body">
                       <div class="setting-element container">
-                          <div class="row">
-                              <form class="col-12">
-                                <a data-toggle="collapse" href="#SEED_collapse" role="button" aria-expanded="true" aria-controls="SEED_collapse"><label for="SEED_input_slider" class="input_label"><button class="btn btn-light"><span class="fa fa-bars info_icon_left"></span>Seed</button></label></a>
-                                  <input id="SEED_input_slider" class="input_slider" type="range" min="-10" max="10" value ="-1" oninput="updateForm('SEED_input_slider', 'SEED_amount', 'SEED_input_slider_mobile')" />
-                                  <input id="SEED_amount" class="input_numeric_val" type="number" min="-10" max="10" value="-1" oninput="updateForm('SEED_amount', 'SEED_input_slider', 'SEED_input_slider_mobile')" />
-
-                                  <div class="collapse dropdown_bubble" id="SEED_collapse">
-                                    <div class="arrow_up"></div>
-                                    <div class="info_block">
-                                        <p> Random number generator seed </p>
-                                        <div class="mobile_slider">
-                                            <hr>
-                                            <input id="SEED_input_slider_mobile" class="input_slider_mobile" type="range" min="-10" max="10" value ="-1" oninput="updateForm('SEED_input_slider_mobile', 'SEED_input_slider', 'SEED_amount')" />
-                                        </div>
+                        <div class="row">
+                          <form class="col-12">
+                            <a data-toggle="collapse" href="#PLATE_DEPTH_collapse" role="button" aria-expanded="true" aria-controls="PLATE_DEPTH_collapse"><label for="PLATE_DEPTH_input_slider" class="input_label">Plate Depth</label></a>
+                              <input id="PLATE_DEPTH_input_slider" class="input_slider" type="range" value="1.45" min="0" max="14.5" step="0.145" oninput="updateForm('PLATE_DEPTH_input_slider', 'PLATE_DEPTH_amount', 'PLATE_DEPTH_input_slider_mobile')" />
+                              <input id="PLATE_DEPTH_amount" class="input_numeric_val" type="number" value="1.45" min="0" max="14.5" step="0.145" oninput="updateForm('PLATE_DEPTH_amount', 'PLATE_DEPTH_input_slider', 'PLATE_DEPTH_input_slider_mobile')" />
+        
+                              <div class="collapse dropdown_bubble" id="PLATE_DEPTH_collapse">
+                                <div class="arrow_up"></div>
+                                <div class="info_block">
+                                    <p> Depth of plate in mm </p>
+                                    <div class="mobile_slider">
+                                        <hr>
+                                        <input id="PLATE_DEPTH_input_slider_mobile" class="input_slider_mobile" type="range" value="1.45" min="0" max="14.5" step="0.145" oninput="updateForm('PLATE_DEPTH_input_slider_mobile', 'PLATE_DEPTH_input_slider', 'PLATE_DEPTH_amount')" />
                                     </div>
                                 </div>
-                                </form>
                             </div>
-
-                            <div class="row">
-                              <form class="col-12">
-                                <a data-toggle="collapse" href="#TIME_STEPS_collapse" role="button" aria-expanded="true" aria-controls="TIME_STEPS_collapse"><label for="TIME_STEPS_input_slider" class="input_label"><button class="btn btn-light"><span class="fa fa-bars info_icon_left"></span>Time Steps</button></label></a>
-                                  <input id="TIME_STEPS_input_slider" class="input_slider" type="range" min="-10" max="10000" value="1000" oninput="updateForm('TIME_STEPS_input_slider', 'TIME_STEPS_amount', 'TIME_STEPS_input_slider_mobile')" />
-                                  <input id="TIME_STEPS_amount" class="input_numeric_val" type="number" min="-10" max="10000" value="1000" oninput="updateForm('TIME_STEPS_amount', 'TIME_STEPS_input_slider', 'TIME_STEPS_input_slider_mobile')" />
-                              
-                                  <div class="collapse dropdown_bubble" id="TIME_STEPS_collapse">
-                                    <div class="arrow_up"></div>
-                                    <div class="info_block">
-                                        <p> Number of time steps to run for </p>
-                                        <div class="mobile_slider">
-                                            <hr>
-                                            <input id="TIME_STEPS_input_slider_mobile" class="input_slider_mobile" type="range" min="-10" max="10000" value="1000" oninput="updateForm('TIME_STEPS_input_slider_mobile', 'TIME_STEPS_input_slider', 'TIME_STEPS_amount')" />
-                                        </div>
+                          </form>
+                      </div>
+                  
+                      <div class="row">
+                          <form class="col-12">
+                            <a data-toggle="collapse" href="#CELL_DIAMETER_collapse" role="button" aria-expanded="true" aria-controls="CELL_DIAMETER_collapse"><label for="CELL_DIAMETER_input_slider" class="input_label">Cell Diameter</label></a>
+                              <input id="CELL_DIAMETER_input_slider" class="input_slider" type="range" value="20" min="0" max="200" step="2" oninput="updateForm('CELL_DIAMETER_input_slider', 'CELL_DIAMETER_amount', 'CELL_DIAMETER_input_slider_mobile')" />
+                              <input id="CELL_DIAMETER_amount" class="input_numeric_val" type="number" value="20" min="0" max="200" step="2" oninput="updateForm('CELL_DIAMETER_amount', 'CELL_DIAMETER_input_slider', 'CELL_DIAMETER_input_slider_mobile')" />
+        
+                              <div class="collapse dropdown_bubble" id="CELL_DIAMETER_collapse">
+                                <div class="arrow_up"></div>
+                                <div class="info_block">
+                                    <p> Cell length and width in microns </p>
+                                    <div class="mobile_slider">
+                                        <hr>
+                                        <input id="CELL_DIAMETER_input_slider_mobile" class="input_slider_mobile" type="range" value="20" min="0" max="200" step="2" oninput="updateForm('CELL_DIAMETER_input_slider_mobile', 'CELL_DIAMETER_input_slider', 'CELL_DIAMETER_amount')" />
                                     </div>
                                 </div>
-                                </form>
-                          </div>
-
-                          <div class="row">
-                              <form class="col-12">
-                                <a data-toggle="collapse" href="#PLATE_LENGTH_collapse" role="button" aria-expanded="true" aria-controls="PLATE_LENGTH_collapse"><label for="PLATE_LENGTH_input_slider" class="input_label"><button class="btn btn-light"><span class="fa fa-bars info_icon_left"></span>Length</button></label></a>
-                                  <input id="PLATE_LENGTH_input_slider" class="input_slider" type="range" value="10" min="0" max="100" step="1" oninput="updateForm('PLATE_LENGTH_input_slider', 'PLATE_LENGTH_amount', 'PLATE_LENGTH_input_slider_mobile')" />
-                                  <input id="PLATE_LENGTH_amount" class="input_numeric_val" type="number" value="10" min="0" max="100" step="1" oninput="updateForm('PLATE_LENGTH_amount', 'PLATE_LENGTH_input_slider', 'PLATE_LENGTH_input_slider_mobile')" />
-                              
-                                  <div class="collapse dropdown_bubble" id="PLATE_LENGTH_collapse">
-                                    <div class="arrow_up"></div>
-                                    <div class="info_block">
-                                        <p> Length of plate in mm </p>
-                                        <div class="mobile_slider">
-                                            <hr>
-                                            <input id="PLATE_LENGTH_input_slider_mobile" class="input_slider_mobile" type="range" value="10" min="0" max="100" step="1" oninput="updateForm('PLATE_LENGTH_input_slider_mobile', 'PLATE_LENGTH_input_slider', 'PLATE_LENGTH_amount')" />
-                                        </div>
+                            </div>
+                          </form>
+                      </div>
+                  
+                      <div class="row">
+                          <form class="col-12">
+                            <a data-toggle="collapse" href="#INIT_POP_SIZE_collapse" role="button" aria-expanded="true" aria-controls="INIT_POP_SIZE_collapse"><label for="INIT_POP_SIZE_input_slider" class="input_label">Init Pop Size</label></a>
+                              <input id="INIT_POP_SIZE_input_slider" class="input_slider" type="range" value="100" min="0" max="1000" oninput="updateForm('INIT_POP_SIZE_input_slider', 'INIT_POP_SIZE_amount', 'INIT_POP_SIZE_input_slider_mobile')" />
+                              <input id="INIT_POP_SIZE_amount" class="input_numeric_val" type="number" value="100" min="0" max="1000" oninput="updateForm('INIT_POP_SIZE_amount', 'INIT_POP_SIZE_input_slider', 'INIT_POP_SIZE_input_slider_mobile')" />
+        
+                              <div class="collapse dropdown_bubble" id="INIT_POP_SIZE_collapse">
+                                <div class="arrow_up"></div>
+                                <div class="info_block">
+                                    <p> Number of cells to seed population with </p>
+                                    <div class="mobile_slider">
+                                        <hr>
+                                        <input id="INIT_POP_SIZE_input_slider_mobile" class="input_slider_mobile" type="range" value="100" min="0" max="1000" oninput="updateForm('INIT_POP_SIZE_input_slider_mobile', 'INIT_POP_SIZE_input_slider', 'INIT_POP_SIZE_amount')" />
                                     </div>
                                 </div>
-                                </form>
-                          </div>
-                          <div class="row">
-                              <form class="col-12">
-                                <a data-toggle="collapse" href="#PLATE_WIDTH_collapse" role="button" aria-expanded="true" aria-controls="PLATE_WIDTH_collapse"><label for="PLATE_WIDTH_input_slider" class="input_label"><button class="btn btn-light"><span class="fa fa-bars info_icon_left"></span>Plate Width</button></label></a>
-                                  <input id="PLATE_WIDTH_input_slider" class="input_slider" type="range" value="6" min="0" max="60" step="0.6" oninput="updateForm('PLATE_WIDTH_input_slider', 'PLATE_WIDTH_amount', 'PLATE_WIDTH_input_slider_mobile')" />
-                                  <input id="PLATE_WIDTH_amount" class="input_numeric_val" type="number" value="6" min="0" max="60" step="0.6" oninput="updateForm('PLATE_WIDTH_amount', 'PLATE_WIDTH_input_slider', 'PLATE_WIDTH_input_slider_mobile')" />
-
-                                  <div class="collapse dropdown_bubble" id="PLATE_WIDTH_collapse">
-                                    <div class="arrow_up"></div>
-                                    <div class="info_block">
-                                        <p> Width of plate in mm </p>
-                                        <div class="mobile_slider">
-                                            <hr>
-                                            <input id="PLATE_WIDTH_input_slider_mobile" class="input_slider_mobile" type="range" value="6" min="0" max="60" step="0.6" oninput="updateForm('PLATE_WIDTH_input_slider_mobile', 'PLATE_WIDTH_input_slider', 'PLATE_WIDTH_amount')" />
-                                        </div>
-                                    </div>
-                                </div>
-                              </form>
-                          </div>
+                            </div>
+                          </form>
+                      </div>
                       </div>
                   </div>
                 </div>
               </div>
+              <!-- OPTION 2 -->
+              <div class="card settings_OPTION2 accordian" id="OPTION2_accordian">
+                <div class="card-header" id="OPTION2_heading">
+                  <button class="btn btn-link setting_heading" type="button" data-toggle="collapse" data-target="#OPTION2_collapse" aria-expanded="true" aria-controls="OPTION2_collapse">
+                    <h3>Option 2</h3>
+                  </button>
+                </div>
+                <div id="OPTION2_collapse" class="collapse show" aria-labelledby="OPTION2_heading" data-parent="#OPTION2_accordian">
+                  <div class="card-body">
+                      <div class="setting-element container">
+                        <div class="row">
+                          <form class="col-12">
+                            <a data-toggle="collapse" href="#SEED_collapse" role="button" aria-expanded="true" aria-controls="SEED_collapse"><label for="SEED_input_slider" class="input_label"><button class="btn btn-light"><span class="fa fa-bars info_icon_left"></span>Seed</button></label></a>
+                              <input id="SEED_input_slider" class="input_slider" type="range" min="-10" max="10" value ="-1" oninput="updateForm('SEED_input_slider', 'SEED_amount', 'SEED_input_slider_mobile')" />
+                              <input id="SEED_amount" class="input_numeric_val" type="number" min="-10" max="10" value="-1" oninput="updateForm('SEED_amount', 'SEED_input_slider', 'SEED_input_slider_mobile')" />
+
+                              <div class="collapse dropdown_bubble" id="SEED_collapse">
+                                <div class="arrow_up"></div>
+                                <div class="info_block">
+                                    <p> Random number generator seed </p>
+                                    <div class="mobile_slider">
+                                        <hr>
+                                        <input id="SEED_input_slider_mobile" class="input_slider_mobile" type="range" min="-10" max="10" value ="-1" oninput="updateForm('SEED_input_slider_mobile', 'SEED_input_slider', 'SEED_amount')" />
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+
+                        <div class="row">
+                          <form class="col-12">
+                            <a data-toggle="collapse" href="#TIME_STEPS_collapse" role="button" aria-expanded="true" aria-controls="TIME_STEPS_collapse"><label for="TIME_STEPS_input_slider" class="input_label"><button class="btn btn-light"><span class="fa fa-bars info_icon_left"></span>Time Steps</button></label></a>
+                              <input id="TIME_STEPS_input_slider" class="input_slider" type="range" min="-10" max="10000" value="1000" oninput="updateForm('TIME_STEPS_input_slider', 'TIME_STEPS_amount', 'TIME_STEPS_input_slider_mobile')" />
+                              <input id="TIME_STEPS_amount" class="input_numeric_val" type="number" min="-10" max="10000" value="1000" oninput="updateForm('TIME_STEPS_amount', 'TIME_STEPS_input_slider', 'TIME_STEPS_input_slider_mobile')" />
+                          
+                              <div class="collapse dropdown_bubble" id="TIME_STEPS_collapse">
+                                <div class="arrow_up"></div>
+                                <div class="info_block">
+                                    <p> Number of time steps to run for </p>
+                                    <div class="mobile_slider">
+                                        <hr>
+                                        <input id="TIME_STEPS_input_slider_mobile" class="input_slider_mobile" type="range" min="-10" max="10000" value="1000" oninput="updateForm('TIME_STEPS_input_slider_mobile', 'TIME_STEPS_input_slider', 'TIME_STEPS_amount')" />
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                      </div>
+
+                      <div class="row">
+                          <form class="col-12">
+                            <a data-toggle="collapse" href="#PLATE_LENGTH_collapse" role="button" aria-expanded="true" aria-controls="PLATE_LENGTH_collapse"><label for="PLATE_LENGTH_input_slider" class="input_label"><button class="btn btn-light"><span class="fa fa-bars info_icon_left"></span>Length</button></label></a>
+                              <input id="PLATE_LENGTH_input_slider" class="input_slider" type="range" value="10" min="0" max="100" step="1" oninput="updateForm('PLATE_LENGTH_input_slider', 'PLATE_LENGTH_amount', 'PLATE_LENGTH_input_slider_mobile')" />
+                              <input id="PLATE_LENGTH_amount" class="input_numeric_val" type="number" value="10" min="0" max="100" step="1" oninput="updateForm('PLATE_LENGTH_amount', 'PLATE_LENGTH_input_slider', 'PLATE_LENGTH_input_slider_mobile')" />
+                          
+                              <div class="collapse dropdown_bubble" id="PLATE_LENGTH_collapse">
+                                <div class="arrow_up"></div>
+                                <div class="info_block">
+                                    <p> Length of plate in mm </p>
+                                    <div class="mobile_slider">
+                                        <hr>
+                                        <input id="PLATE_LENGTH_input_slider_mobile" class="input_slider_mobile" type="range" value="10" min="0" max="100" step="1" oninput="updateForm('PLATE_LENGTH_input_slider_mobile', 'PLATE_LENGTH_input_slider', 'PLATE_LENGTH_amount')" />
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <!-- OPTION 3 -->
+              <div class="card settings_OPTION3 accordian" id="OPTION3_accordian">
+                <div class="card-header" id="OPTION3_heading">
+                  <button class="btn btn-link setting_heading" type="button" data-toggle="collapse" data-target="#OPTION3_collapse" aria-expanded="true" aria-controls="OPTION3_collapse">
+                    <h3>Option 3</h3>
+                  </button>
+                </div>
+                <div id="OPTION3_collapse" class="collapse show" aria-labelledby="OPTION3_heading" data-parent="#OPTION3_accordian">
+                  <div class="card-body">
+                      <div class="setting-element container">
+                        <div class="row">
+                          <form class="col-12">
+                            <a data-toggle="collapse" href="#PLATE_WIDTH_collapse" role="button" aria-expanded="true" aria-controls="PLATE_WIDTH_collapse"><label for="PLATE_WIDTH_input_slider" class="input_label"><span class="fa fa-angle-double-down info_icon_left"></span>Plate Width</label></a>
+                              <input id="PLATE_WIDTH_input_slider" class="input_slider" type="range" value="6" min="0" max="60" step="0.6" oninput="updateForm('PLATE_WIDTH_input_slider', 'PLATE_WIDTH_amount', 'PLATE_WIDTH_input_slider_mobile')" />
+                              <input id="PLATE_WIDTH_amount" class="input_numeric_val" type="number" value="6" min="0" max="60" step="0.6" oninput="updateForm('PLATE_WIDTH_amount', 'PLATE_WIDTH_input_slider', 'PLATE_WIDTH_input_slider_mobile')" />
+
+                              <div class="collapse dropdown_bubble" id="PLATE_WIDTH_collapse">
+                                <div class="arrow_up"></div>
+                                <div class="info_block">
+                                    <p> Width of plate in mm </p>
+                                    <div class="mobile_slider">
+                                        <hr>
+                                        <input id="PLATE_WIDTH_input_slider_mobile" class="input_slider_mobile" type="range" value="6" min="0" max="60" step="0.6" oninput="updateForm('PLATE_WIDTH_input_slider_mobile', 'PLATE_WIDTH_input_slider', 'PLATE_WIDTH_amount')" />
+                                    </div>
+                                </div>
+                            </div>
+                          </form>
+                      </div>
+
+                      <div class="row">
+                        <form class="col-12">
+                          <a data-toggle="collapse" href="#HYPOXIA_DEATH_PROB_collapse" role="button" aria-expanded="true" aria-controls="HYPOXIA_DEATH_PROB_collapse"><label for="HYPOXIA_DEATH_PROB_input_slider" class="input_label"><span class="fa fa-angle-double-down info_icon_left"></span>Hypoxia Death Prob</label></a>
+                            <input id="HYPOXIA_DEATH_PROB_input_slider" class="input_slider" type="range" value="0.25" min="0" max="1" step="0.025" oninput="updateForm('HYPOXIA_DEATH_PROB_input_slider', 'HYPOXIA_DEATH_PROB_amount', 'HYPOXIA_DEATH_PROB_input_slider_mobile')" />
+                            <input id="HYPOXIA_DEATH_PROB_amount" class="input_numeric_val" type="number" value="0.25" min="0" max="1" step="0.025" oninput="updateForm('HYPOXIA_DEATH_PROB_amount', 'HYPOXIA_DEATH_PROB_input_slider', 'HYPOXIA_DEATH_PROB_input_slider_mobile')" />
+
+                            <div class="collapse dropdown_bubble" id="HYPOXIA_DEATH_PROB_collapse">
+                              <div class="arrow_up"></div>
+                              <div class="info_block">
+                                  <p> Probability of dieing, given hypoxic conditions </p>
+                                  <div class="mobile_slider">
+                                      <hr>
+                                      <input id="HYPOXIA_DEATH_PROB_input_slider_mobile" class="input_slider_mobile" type="range" value="0.25" min="0" max="1" step="0.025" oninput="updateForm('HYPOXIA_DEATH_PROB_input_slider_mobile', 'HYPOXIA_DEATH_PROB_input_slider', 'HYPOXIA_DEATH_PROB_amount')" />
+                                  </div>
+                              </div>
+                          </div>
+                        </form>
+                    </div>
+
+                    <div class="row">
+                      <form class="col-12">
+                        <a data-toggle="collapse" href="#OXYGEN_THRESHOLD_collapse" role="button" aria-expanded="true" aria-controls="OXYGEN_THRESHOLD_collapse"><label for="OXYGEN_THRESHOLD_input_slider" class="input_label"><span class="fa fa-angle-double-down info_icon_left"></span>Oxygen Threshold</label></a>
+                          <input id="OXYGEN_THRESHOLD_input_slider" class="input_slider" type="range" value="0.1" min="0" max="10" step="0.01" oninput="updateForm('OXYGEN_THRESHOLD_input_slider', 'OXYGEN_THRESHOLD_amount', 'OXYGEN_THRESHOLD_input_slider_mobile')" />
+                          <input id="OXYGEN_THRESHOLD_amount" class="input_numeric_val" type="number" value="0.1" min="0" max="10" step="0.01" oninput="updateForm('OXYGEN_THRESHOLD_amount', 'OXYGEN_THRESHOLD_input_slider', 'OXYGEN_THRESHOLD_input_slider_mobile')" />
+
+                          <div class="collapse dropdown_bubble" id="OXYGEN_THRESHOLD_collapse">
+                            <div class="arrow_up"></div>
+                            <div class="info_block">
+                                <p> How much oxygen do cells need to survive? </p>
+                                <div class="mobile_slider">
+                                    <hr>
+                                    <input id="OXYGEN_THRESHOLD_input_slider_mobile" class="input_slider_mobile" type="range" value="0.1" min="0" max="10" step="0.01" oninput="updateForm('OXYGEN_THRESHOLD_input_slider_mobile', 'OXYGEN_THRESHOLD_input_slider', 'OXYGEN_THRESHOLD_amount')" />
+                                </div>
+                            </div>
+                        </div>
+                      </form>
+                  </div>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                  
 
               <!-- Cell Settings -->
               <div class="card accordian settings_CELL" id="CELL_accordian">
                 <div class="card-header" id="CELL_heading">
                     <button class="btn btn-link setting_heading" type="button" data-toggle="collapse" data-target="#CELL_collapse" aria-expanded="false" aria-controls="CELL_collapse">
-                      <h3>Option 2</h3>
+                      <h3>Option 4</h3>
                     </button>
                 </div>
                 <div id="CELL_collapse" class="collapse show" aria-labelledby="CELL_heading" data-parent="#CELL_accordian">
@@ -183,24 +306,7 @@
                               </form>
                           </div>
   
-                          <div class="row">
-                              <form class="col-12">
-                                <a data-toggle="collapse" href="#HYPOXIA_DEATH_PROB_collapse" role="button" aria-expanded="true" aria-controls="HYPOXIA_DEATH_PROB_collapse"><label for="HYPOXIA_DEATH_PROB_input_slider" class="input_label"><span class="fa fa-info-circle info_icon_left"></span>Hypoxia Death Prob</label></a>
-                                  <input id="HYPOXIA_DEATH_PROB_input_slider" class="input_slider" type="range" value="0.25" min="0" max="1" step="0.025" oninput="updateForm('HYPOXIA_DEATH_PROB_input_slider', 'HYPOXIA_DEATH_PROB_amount', 'HYPOXIA_DEATH_PROB_input_slider_mobile')" />
-                                  <input id="HYPOXIA_DEATH_PROB_amount" class="input_numeric_val" type="number" value="0.25" min="0" max="1" step="0.025" oninput="updateForm('HYPOXIA_DEATH_PROB_amount', 'HYPOXIA_DEATH_PROB_input_slider', 'HYPOXIA_DEATH_PROB_input_slider_mobile')" />
-
-                                  <div class="collapse dropdown_bubble" id="HYPOXIA_DEATH_PROB_collapse">
-                                    <div class="arrow_up"></div>
-                                    <div class="info_block">
-                                        <p> Probability of dieing, given hypoxic conditions </p>
-                                        <div class="mobile_slider">
-                                            <hr>
-                                            <input id="HYPOXIA_DEATH_PROB_input_slider_mobile" class="input_slider_mobile" type="range" value="0.25" min="0" max="1" step="0.025" oninput="updateForm('HYPOXIA_DEATH_PROB_input_slider_mobile', 'HYPOXIA_DEATH_PROB_input_slider', 'HYPOXIA_DEATH_PROB_amount')" />
-                                        </div>
-                                    </div>
-                                </div>
-                              </form>
-                          </div>
+                          
                       </div>
                   </div>
                 </div>
@@ -209,7 +315,7 @@
               <div class="card accordian settings_OXYGEN" id="OXYGEN_accordian">
                 <div class="card-header" id="OXYGEN_heading">
                     <button class="btn btn-link setting_heading" type="button" data-toggle="collapse" data-target="#OXYGEN_collapse" aria-expanded="false" aria-controls="OXYGEN_collapse">
-                      <h3>Option 3</h3>
+                      <h3>Option 5</h3>
                     </button>
                 </div>
                 <div id="OXYGEN_collapse" class="collapse show" aria-labelledby="OXYGEN_heading" data-parent="#OXYGEN_accordian">
@@ -272,24 +378,7 @@
                               </form>
                           </div>
   
-                          <div class="row">
-                              <form class="col-12">
-                                <a data-toggle="collapse" href="#OXYGEN_THRESHOLD_collapse" role="button" aria-expanded="true" aria-controls="OXYGEN_THRESHOLD_collapse"><label for="OXYGEN_THRESHOLD_input_slider" class="input_label"><span class="fa fa-question-circle info_icon_left"></span>Oxygen Threshold</label></a>
-                                  <input id="OXYGEN_THRESHOLD_input_slider" class="input_slider" type="range" value="0.1" min="0" max="10" step="0.01" oninput="updateForm('OXYGEN_THRESHOLD_input_slider', 'OXYGEN_THRESHOLD_amount', 'OXYGEN_THRESHOLD_input_slider_mobile')" />
-                                  <input id="OXYGEN_THRESHOLD_amount" class="input_numeric_val" type="number" value="0.1" min="0" max="10" step="0.01" oninput="updateForm('OXYGEN_THRESHOLD_amount', 'OXYGEN_THRESHOLD_input_slider', 'OXYGEN_THRESHOLD_input_slider_mobile')" />
-
-                                  <div class="collapse dropdown_bubble" id="OXYGEN_THRESHOLD_collapse">
-                                    <div class="arrow_up"></div>
-                                    <div class="info_block">
-                                        <p> How much oxygen do cells need to survive? </p>
-                                        <div class="mobile_slider">
-                                            <hr>
-                                            <input id="OXYGEN_THRESHOLD_input_slider_mobile" class="input_slider_mobile" type="range" value="0.1" min="0" max="10" step="0.01" oninput="updateForm('OXYGEN_THRESHOLD_input_slider_mobile', 'OXYGEN_THRESHOLD_input_slider', 'OXYGEN_THRESHOLD_amount')" />
-                                        </div>
-                                    </div>
-                                </div>
-                              </form>
-                          </div>
+                          
                       </div>
                   </div>
                 </div>
@@ -298,7 +387,7 @@
               <div class="card accordian settings_TREATMENT" id="TREATMENT_accordian">
                   <div class="card-header" id="TREATMENT_heading">
                       <button class="btn btn-link setting_heading" type="button" data-toggle="collapse" data-target="#TREATMENT_collapse" aria-expanded="false" aria-controls="TREATMENT_collapse">
-                        <h3>Option 4</h3>
+                        <h3>Option 6</h3>
                       </button>
                   </div>
                   <div id="TREATMENT_collapse" class="collapse show" aria-labelledby="TREATMENT_heading" data-parent="#TREATMENT_accordian">
@@ -340,28 +429,6 @@
                                     </div>
                                 </div>
                               </form>
-                          </div>
-
-                          <div class="row">
-                            <!-- oninput="file_name.value=RADIATION_PRESCRIPTION_FILE_input_text.value" -->
-                            <form class="col-12">
-                              <a data-toggle="collapse" href="RADIATION_PRESCRIPTION_FILE_collapse" role="button" aria-expanded="true" aria-controls="RADIATION_PRESCRIPTION_FILE_collapse"><label for="RADIATION_PRESCRIPTION_FILE_input_text" class="input_label"><span class="fa fa-plus-circle info_icon_left"></span>Radiation Prescription File</label></a>
-                              <input id="RADIATION_PRESCRIPTION_FILE_input_text" class="input_text" type="text" value="none"/>
-                              <!-- <output id="RADIATION_PRESCRIPTION_FILE_output_text" class="output_text" for="RADIATION_PRESCRIPTION_FILE_input_text" name="file_name">none</output> -->
-
-                              <!-- TODO: Description toggle not working -->
-
-                              <div class="collapse dropdown_bubble" id="RADIATION_PRESCRIPTION_FILE_collapse">
-                                <div class="info_block">
-                                  <div class="arrow_up"></div>
-                                    <p> File containing radiation prescription </p>
-                                    <!-- <div class="mobile_text_input">
-                                      <hr />
-                                      <input id="RADIATION_PRESCRIPTION_FILE_input_text" class="input_text" type="text" value="none" oninput="RADIATION_PRESCRIPTION_FILE_output_text.value=RADIATION_PRESCRIPTION_FILE_input_text.value"/>
-                                    </div> -->
-                                </div>
-                            </div>
-                            </form>
                           </div>
   
                           <div class="row">
