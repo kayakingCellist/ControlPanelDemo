@@ -15,6 +15,12 @@
     text-decoration: underline;
 }
 
+.setting_toggle[aria-expanded=true] .fa-angle-double-down{
+    display: none;
+}
+.setting_toggle[aria-expanded=false] .fa-angle-double-up{
+    display: none;
+}
 /* Desktop Version */
 
 /* Control Panel Elements */
