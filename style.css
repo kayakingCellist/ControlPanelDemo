@@ -14,12 +14,6 @@
     color: black;
     text-decoration: underline;
 }
-/* Statistics panel will stay in view as user scrolls in desktop version */
-.sticky{
-    position: -webkit-sticky; /* For Safari support */
-    position: sticky;
-    top:0;
-}
 
 /* Desktop Version */
 
@@ -29,7 +23,6 @@
 }
 .input_label{
     width: 39%;
-    float: left;
     left: 10px;
 }
 .input_slider{
@@ -42,13 +35,13 @@
     clear: none;
 }
 .input_text{
-    width: 39%;
+    width: 59%;
+}
+.info_icon_left{
+    margin-right: 10px;
 }
 
 /* Description Box */
-.dropdown_bubble{
-    margin-top: 25px;
-}
 .info_block{
     display: block;
     font-style: italic;
@@ -78,21 +71,14 @@
 @media screen and (max-width: 600px) {
     /* Control Panel Elements */
     .input_label{
-        left: 10px;
-        width: auto;
-        float: left;
-        clear: none;
+        width: 80%;
     }
     .input_slider{
         display: none;
         width: 0%;
     }
     .input_numeric_val{
-        position: absolute;
-        width: 20%;
-        float: right;
-        right: 10px;
-        clear: none;
+        width: 20%
     }
     .input_text{
         width: 20%;
