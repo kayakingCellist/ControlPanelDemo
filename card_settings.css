@@ -1,0 +1,26 @@
+  /* For card demo */
+  .card{
+      margin-bottom: 20px;
+  }
+  .card-header{
+      height: 50px;
+  }
+
+  #header_1:hover {
+    background-color: #C0C0C0;
+    opacity: .7;
+  }
+
+  #hover_2:hover ~ #collapse_2{
+    background-color: #C0C0C0;
+    opacity: .7;
+  }
+
+  #hover_3:hover{
+    background-color: #C0C0C0;
+    opacity: .7;
+  }
+  #hover_3:hover ~ #collapse_3{
+    background: #C0C0C0;
+    opacity: .7;
+  }

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="card_settings.css">
+        <!-- JavaScript -->
+        <script src="main.js"></script>
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <meta name="viewport" content="width=device-width, initial=scale=1.0">
+        <meta charset="utf-8">
+
+        <title> Demo</title>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Card Demo</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    
+                    <div class="settings">
+
+                        <!-- Option 1 -->
+                        <h3>Option 1</h3>
+            <div class="card" id="card_1">
+                <div data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" aria-controls="collapse_1" id="header_1">
+                <div class="card-header" id="heading_1">
+                </div>
+                </div>
+            
+                <div id="collapse_1" class="collapse show" aria-labelledby="heading_1" data-parent="#card_1">
+                  <div class="card-body" id="body_1">
+                      <div class="setting-element container">
+                        <div class="row">
+                          <form class="col-12">
+                            <a data-toggle="collapse" href="#PLATE_DEPTH_collapse" role="button" aria-expanded="true" aria-controls="PLATE_DEPTH_collapse"><label for="PLATE_DEPTH_input_slider" class="input_label">Plate Depth</label></a>
+                              <input id="PLATE_DEPTH_input_slider" class="input_slider" type="range" value="1.45" min="0" max="14.5" step="0.145" oninput="updateForm('PLATE_DEPTH_input_slider', 'PLATE_DEPTH_amount', 'PLATE_DEPTH_input_slider_mobile')" />
+                              <input id="PLATE_DEPTH_amount" class="input_numeric_val" type="number" value="1.45" min="0" max="14.5" step="0.145" oninput="updateForm('PLATE_DEPTH_amount', 'PLATE_DEPTH_input_slider', 'PLATE_DEPTH_input_slider_mobile')" />
+        
+                              <div class="collapse dropdown_bubble" id="PLATE_DEPTH_collapse">
+                                <div class="arrow_up"></div>
+                                <div class="info_block">
+                                    <p> Depth of plate in mm </p>
+                                    <div class="mobile_slider">
+                                        <hr>
+                                        <input id="PLATE_DEPTH_input_slider_mobile" class="input_slider_mobile" type="range" value="1.45" min="0" max="14.5" step="0.145" oninput="updateForm('PLATE_DEPTH_input_slider_mobile', 'PLATE_DEPTH_input_slider', 'PLATE_DEPTH_amount')" />
+                                    </div>
+                                </div>
+                            </div>
+                          </form>
+                      </div>
+                  
+                      <div class="row">
+                          <form class="col-12">
+                            <a data-toggle="collapse" href="#CELL_DIAMETER_collapse" role="button" aria-expanded="true" aria-controls="CELL_DIAMETER_collapse"><label for="CELL_DIAMETER_input_slider" class="input_label">Cell Diameter</label></a>
+                              <input id="CELL_DIAMETER_input_slider" class="input_slider" type="range" value="20" min="0" max="200" step="2" oninput="updateForm('CELL_DIAMETER_input_slider', 'CELL_DIAMETER_amount', 'CELL_DIAMETER_input_slider_mobile')" />
+                              <input id="CELL_DIAMETER_amount" class="input_numeric_val" type="number" value="20" min="0" max="200" step="2" oninput="updateForm('CELL_DIAMETER_amount', 'CELL_DIAMETER_input_slider', 'CELL_DIAMETER_input_slider_mobile')" />
+        
+                              <div class="collapse dropdown_bubble" id="CELL_DIAMETER_collapse">
+                                <div class="arrow_up"></div>
+                                <div class="info_block">
+                                    <p> Cell length and width in microns </p>
+                                    <div class="mobile_slider">
+                                        <hr>
+                                        <input id="CELL_DIAMETER_input_slider_mobile" class="input_slider_mobile" type="range" value="20" min="0" max="200" step="2" oninput="updateForm('CELL_DIAMETER_input_slider_mobile', 'CELL_DIAMETER_input_slider', 'CELL_DIAMETER_amount')" />
+                                    </div>
+                                </div>
+                            </div>
+                          </form>
+                      </div>
+                  
+                      <div class="row">
+                          <form class="col-12">
+                            <a data-toggle="collapse" href="#INIT_POP_SIZE_collapse" role="button" aria-expanded="true" aria-controls="INIT_POP_SIZE_collapse"><label for="INIT_POP_SIZE_input_slider" class="input_label">Init Pop Size</label></a>
+                              <input id="INIT_POP_SIZE_input_slider" class="input_slider" type="range" value="100" min="0" max="1000" oninput="updateForm('INIT_POP_SIZE_input_slider', 'INIT_POP_SIZE_amount', 'INIT_POP_SIZE_input_slider_mobile')" />
+                              <input id="INIT_POP_SIZE_amount" class="input_numeric_val" type="number" value="100" min="0" max="1000" oninput="updateForm('INIT_POP_SIZE_amount', 'INIT_POP_SIZE_input_slider', 'INIT_POP_SIZE_input_slider_mobile')" />
+        
+                              <div class="collapse dropdown_bubble" id="INIT_POP_SIZE_collapse">
+                                <div class="arrow_up"></div>
+                                <div class="info_block">
+                                    <p> Number of cells to seed population with </p>
+                                    <div class="mobile_slider">
+                                        <hr>
+                                        <input id="INIT_POP_SIZE_input_slider_mobile" class="input_slider_mobile" type="range" value="100" min="0" max="1000" oninput="updateForm('INIT_POP_SIZE_input_slider_mobile', 'INIT_POP_SIZE_input_slider', 'INIT_POP_SIZE_amount')" />
+                                    </div>
+                                </div>
+                            </div>
+                          </form>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- OPTION 2 -->
+              <h3>Option 2</h3>
+            <div class="card" id="card_2">
+                <div data-toggle="collapse" data-target="#collapse_2" aria-expanded="true" aria-controls="collapse_2" id="hover_2">
+                <div class="card-header" id="heading_2">
+                </div>
+            </div>
+                <div id="collapse_2" class="collapse show" aria-labelledby="heading_2" data-parent="#card_2">
+                  <div class="card-body" id="body_2">
+                      <div class="setting-element container">
+                        <div class="row">
+                          <form class="col-12">
+                            <a data-toggle="collapse" href="#PLATE_WIDTH_collapse" class="setting_toggle" role="button" aria-expanded="false" aria-controls="PLATE_WIDTH_collapse"><label for="PLATE_WIDTH_input_slider" class="input_label">Plate Width</label></a>
+                              <input id="PLATE_WIDTH_input_slider" class="input_slider" type="range" value="6" min="0" max="60" step="0.6" oninput="updateForm('PLATE_WIDTH_input_slider', 'PLATE_WIDTH_amount', 'PLATE_WIDTH_input_slider_mobile')" />
+                              <input id="PLATE_WIDTH_amount" class="input_numeric_val" type="number" value="6" min="0" max="60" step="0.6" oninput="updateForm('PLATE_WIDTH_amount', 'PLATE_WIDTH_input_slider', 'PLATE_WIDTH_input_slider_mobile')" />
+
+                              <div class="collapse dropdown_bubble" id="PLATE_WIDTH_collapse">
+                                <div class="arrow_up"></div>
+                                <div class="info_block">
+                                    <p> Width of plate in mm </p>
+                                    <div class="mobile_slider">
+                                        <hr>
+                                        <input id="PLATE_WIDTH_input_slider_mobile" class="input_slider_mobile" type="range" value="6" min="0" max="60" step="0.6" oninput="updateForm('PLATE_WIDTH_input_slider_mobile', 'PLATE_WIDTH_input_slider', 'PLATE_WIDTH_amount')" />
+                                    </div>
+                                </div>
+                            </div>
+                          </form>
+                      </div>
+
+                      <div class="row">
+                        <form class="col-12">
+                          <a data-toggle="collapse" href="#HYPOXIA_DEATH_PROB_collapse" class="setting_toggle" role="button" aria-expanded="false" aria-controls="HYPOXIA_DEATH_PROB_collapse"><label for="HYPOXIA_DEATH_PROB_input_slider" class="input_label">Hypoxia Death Prob</label></a>
+                            <input id="HYPOXIA_DEATH_PROB_input_slider" class="input_slider" type="range" value="0.25" min="0" max="1" step="0.025" oninput="updateForm('HYPOXIA_DEATH_PROB_input_slider', 'HYPOXIA_DEATH_PROB_amount', 'HYPOXIA_DEATH_PROB_input_slider_mobile')" />
+                            <input id="HYPOXIA_DEATH_PROB_amount" class="input_numeric_val" type="number" value="0.25" min="0" max="1" step="0.025" oninput="updateForm('HYPOXIA_DEATH_PROB_amount', 'HYPOXIA_DEATH_PROB_input_slider', 'HYPOXIA_DEATH_PROB_input_slider_mobile')" />
+
+                            <div class="collapse dropdown_bubble" id="HYPOXIA_DEATH_PROB_collapse">
+                              <div class="arrow_up"></div>
+                              <div class="info_block">
+                                  <p> Probability of dieing, given hypoxic conditions </p>
+                                  <div class="mobile_slider">
+                                      <hr>
+                                      <input id="HYPOXIA_DEATH_PROB_input_slider_mobile" class="input_slider_mobile" type="range" value="0.25" min="0" max="1" step="0.025" oninput="updateForm('HYPOXIA_DEATH_PROB_input_slider_mobile', 'HYPOXIA_DEATH_PROB_input_slider', 'HYPOXIA_DEATH_PROB_amount')" />
+                                  </div>
+                              </div>
+                          </div>
+                        </form>
+                    </div>
+
+                    <div class="row">
+                      <form class="col-12">
+                        <a data-toggle="collapse" href="#OXYGEN_THRESHOLD_collapse" class="setting_toggle" role="button" aria-expanded="false" aria-controls="OXYGEN_THRESHOLD_collapse"><label for="OXYGEN_THRESHOLD_input_slider" class="input_label">Oxygen Threshold</label></a>
+                          <input id="OXYGEN_THRESHOLD_input_slider" class="input_slider" type="range" value="0.1" min="0" max="10" step="0.01" oninput="updateForm('OXYGEN_THRESHOLD_input_slider', 'OXYGEN_THRESHOLD_amount', 'OXYGEN_THRESHOLD_input_slider_mobile')" />
+                          <input id="OXYGEN_THRESHOLD_amount" class="input_numeric_val" type="number" value="0.1" min="0" max="10" step="0.01" oninput="updateForm('OXYGEN_THRESHOLD_amount', 'OXYGEN_THRESHOLD_input_slider', 'OXYGEN_THRESHOLD_input_slider_mobile')" />
+
+                          <div class="collapse dropdown_bubble" id="OXYGEN_THRESHOLD_collapse">
+                            <div class="arrow_up"></div>
+                            <div class="info_block">
+                                <p> How much oxygen do cells need to survive? </p>
+                                <div class="mobile_slider">
+                                    <hr>
+                                    <input id="OXYGEN_THRESHOLD_input_slider_mobile" class="input_slider_mobile" type="range" value="0.1" min="0" max="10" step="0.01" oninput="updateForm('OXYGEN_THRESHOLD_input_slider_mobile', 'OXYGEN_THRESHOLD_input_slider', 'OXYGEN_THRESHOLD_amount')" />
+                                </div>
+                            </div>
+                        </div>
+                      </form>
+                  </div>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                  
+
+              <!-- Option 3 -->
+              <h3>Option 3</h3>
+              <div class="card" id="card_3">
+                <div data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" aria-controls="collapse_3" id="hover_3">
+                <div class="card-header" id="heading_3">
+                </div>
+            </div>
+                <div id="collapse_3" class="collapse show" aria-labelledby="heading_3" data-parent="#card_3">
+                  <div class="card-body" id="body_3">
+                      <div class="setting-element container">
+                          <div class="row">
+                              <form class="col-12">
+                                <a data-toggle="collapse" href="#NEUTRAL_MUTATION_RATE_collapse" role="button" aria-expanded="true" aria-controls="NEUTRAL_MUTATION_RATE_collapse"><label for="NEUTRAL_MUTATION_RATE_input_slider" class="input_label">Neutral Mutation Rate</label></a>
+                                  <input id="NEUTRAL_MUTATION_RATE_input_slider" class="input_slider" type="range" value="0.05" min="0" max="5" step="0.005" oninput="updateForm('NEUTRAL_MUTATION_RATE_input_slider', 'NEUTRAL_MUTATION_RATE_amount', 'NEUTRAL_MUTATION_RATE_input_slider_mobile')" />
+                                  <input id="NEUTRAL_MUTATION_RATE_amount" class="input_numeric_val" type="number" value="0.05" min="0" max="5" step="0.005" oninput="updateForm('NEUTRAL_MUTATION_RATE_amount', 'NEUTRAL_MUTATION_RATE_input_slider', 'NEUTRAL_MUTATION_RATE_input_slider_mobile')" />
+
+                                  <div class="collapse dropdown_bubble" id="NEUTRAL_MUTATION_RATE_collapse">
+                                    <div class="arrow_up"></div>
+                                    <div class="info_block">
+                                        <p> Probability of a neutral mutation (only relevant for phylogenetic signature) </p>
+                                        <div class="mobile_slider">
+                                            <hr>
+                                            <input id="NEUTRAL_MUTATION_RATE_input_slider_mobile" class="input_slider_mobile" type="range" value="0.05" min="0" max="5" step="0.005" oninput="updateForm('NEUTRAL_MUTATION_RATE_input_slider_mobile', 'NEUTRAL_MUTATION_RATE_input_slider', 'NEUTRAL_MUTATION_RATE_amount')" />
+                                        </div>
+                                    </div>
+                                </div>
+                              </form>
+                          </div>
+  
+                          <div class="row">
+                              <form class="col-12">
+                                <a data-toggle="collapse" href="#ASYMMETRIC_DIVISION_RATE_collapse" role="button" aria-expanded="true" aria-controls="ASYMMETRIC_DIVISION_RATE_collapse"><label for="ASYMMETRIC_DIVISION_RATE_input_slider" class="input_label">Asymmetric Division Prob</label></a>
+                                  <input id="ASYMMETRIC_DIVISION_RATE_input_slider" class="input_slider" type="range" value="0" oninput="updateForm('ASYMMETRIC_DIVISION_RATE_input_slider', 'ASYMMETRIC_DIVISION_RATE_amount', 'ASYMMETRIC_DIVISION_RATE_input_slider_mobile')" />
+                                  <input id="ASYMMETRIC_DIVISION_RATE_amount" class="input_numeric_val" type="number" value="0" oninput="updateForm('ASYMMETRIC_DIVISION_RATE_amount', 'ASYMMETRIC_DIVISION_RATE_input_slider', 'ASYMMETRIC_DIVISION_RATE_input_slider_mobile')" />
+
+                                  <div class="collapse dropdown_bubble" id="ASYMMETRIC_DIVISION_RATE_collapse">
+                                    <div class="arrow_up"></div>
+                                    <div class="info_block">
+                                        <p> Probability of a change in stemness </p>
+                                        <div class="mobile_slider">
+                                            <hr>
+                                            <input id="ASYMMETRIC_DIVISION_RATE_input_slider_mobile" class="input_slider_mobile" type="range" value="0" oninput="updateForm('ASYMMETRIC_DIVISION_RATE_input_slider_mobile', 'ASYMMETRIC_DIVISION_RATE_input_slider', 'ASYMMETRIC_DIVISION_RATE_amount')" />
+                                        </div>
+                                    </div>
+                                </div>
+                              </form>
+                          </div>
+  
+                          <div class="row">
+                              <form class="col-12">
+                                <a data-toggle="collapse" href="#MITOSIS_PROB_collapse" role="button" aria-expanded="true" aria-controls="MITOSIS_PROB_collapse"><label for="MITOSIS_PROB_input_slider" class="input_label">Mitosis Prob</label></a>
+                                  <input id="MITOSIS_PROB_input_slider" class="input_slider" type="range" value="0.5" min="0" max="1" step="0.05" oninput="updateForm('MITOSIS_PROB_input_slider', 'MITOSIS_PROB_amount', 'MITOSIS_PROB_input_slider_mobile')" />
+                                  <input id="MITOSIS_PROB_amount" class="input_numeric_val" type="number" value="0.5" min="0" max="1" step="0.05" oninput="updateForm('MITOSIS_PROB_amount', 'MITOSIS_PROB_input_slider', 'MITOSIS_PROB_input_slider_mobile')" />
+
+                                  <div class="collapse dropdown_bubble" id="MITOSIS_PROB_collapse">
+                                    <div class="arrow_up"></div>
+                                    <div class="info_block">
+                                        <p> Probability of mitosis </p>
+                                        <div class="mobile_slider">
+                                            <hr>
+                                            <input id="MITOSIS_PROB_input_slider_mobile" class="input_slider_mobile" type="range" value="0.5" min="0" max="1" step="0.05" oninput="updateForm('MITOSIS_PROB_input_slider_mobile', 'MITOSIS_PROB_input_slider', 'MITOSIS_PROB_amount')" />
+                                        </div>
+                                    </div>
+                                </div>
+                              </form>
+                          </div>
+  
+                          
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Option 4 -->
+              <h3>Option 4</h3>
+              <div class="card" id="card_4">
+                <div data-toggle="collapse" data-target="#collapse_4" aria-expanded="true" aria-controls="collapse_4">
+                <div class="card-header" id="heading_4">
+                </div>
+            </div>
+                <div id="collapse_4" class="collapse show" aria-labelledby="heading_4" data-parent="#card_4">
+                  <div class="card-body">
+                      <div class="setting-element container">
+                          <div class="row">
+                              <form class="col-12">
+                                <a data-toggle="collapse" href="#INITIAL_OXYGEN_LEVEL_collapse" role="button" aria-expanded="true" aria-controls="INITIAL_OXYGEN_LEVEL_collapse"><label for="INITIAL_OXYGEN_LEVEL_input_slider" class="input_label">Initial Oxygen Level</label></a>
+                                  <input id="INITIAL_OXYGEN_LEVEL_input_slider" class="input_slider" type="range" value="0.5" min="0" max="1" step="0.05" oninput="updateForm('INITIAL_OXYGEN_LEVEL_input_slider', 'INITIAL_OXYGEN_LEVEL_amount', 'INITIAL_OXYGEN_LEVEL_input_slider_mobile')" />
+                                  <input id="INITIAL_OXYGEN_LEVEL_amount" class="input_numeric_val" type="number" value="0.5" min="0" max="1" step="0.05" oninput="updateForm('INITIAL_OXYGEN_LEVEL_amount', 'INITIAL_OXYGEN_LEVEL_input_slider', 'INITIAL_OXYGEN_LEVEL_input_slider_mobile')" />
+
+                                  <div class="collapse dropdown_bubble" id="INITIAL_OXYGEN_LEVEL_collapse">
+                                    <div class="arrow_up"></div>
+                                    <div class="info_block">
+                                        <p> Initial oxygen level (will be placed in all cells) </p>
+                                        <div class="mobile_slider">
+                                            <hr>
+                                            <input id="INITIAL_OXYGEN_LEVEL_input_slider_mobile" class="input_slider_mobile" type="range" value="0.5" min="0" max="1" step="0.05" oninput="updateForm('INITIAL_OXYGEN_LEVEL_input_slider_mobile', 'INITIAL_OXYGEN_LEVEL_input_slider', 'INITIAL_OXYGEN_LEVEL_amount')" />
+                                        </div>
+                                    </div>
+                                </div>
+                              </form>
+                          </div>
+  
+                          <div class="row">
+                              <form class="col-12">
+                                <a data-toggle="collapse" href="#OXYGEN_DIFFUSION_COEFFICIENT_collapse" role="button" aria-expanded="true" aria-controls="OXYGEN_DIFFUSION_COEFFICIENT_collapse"><label for="OXYGEN_DIFFUSION_COEFFICIENT_input_slider" class="input_label">Oxygen Diffusion Coefficient</label></a>
+                                  <input id="OXYGEN_DIFFUSION_COEFFICIENT_input_slider" class="input_slider" type="range" value="0.1" min="0" max="10" step="0.01" oninput="updateForm('OXYGEN_DIFFUSION_COEFFICIENT_input_slider', 'OXYGEN_DIFFUSION_COEFFICIENT_amount', 'OXYGEN_DIFFUSION_COEFFICIENT_input_slider_mobile')" />
+                                  <input id="OXYGEN_DIFFUSION_COEFFICIENT_amount" class="input_numeric_val" type="number" value="0.1" min="0" max="10" step="0.01" oninput="updateForm('OXYGEN_DIFFUSION_COEFFICIENT_amount', 'OXYGEN_DIFFUSION_COEFFICIENT_input_slider', 'OXYGEN_DIFFUSION_COEFFICIENT_input_slider_mobile')" />
+
+                                  <div class="collapse dropdown_bubble" id="OXYGEN_DIFFUSION_COEFFICIENT_collapse">
+                                    <div class="arrow_up"></div>
+                                    <div class="info_block">
+                                        <p> Oxygen diffusion coefficient </p>
+                                        <div class="mobile_slider">
+                                            <hr>
+                                            <input id="OXYGEN_DIFFUSION_COEFFICIENT_input_slider_mobile" class="input_slider_mobile" type="range" value="0.1" min="0" max="10" step="0.01" oninput="updateForm('OXYGEN_DIFFUSION_COEFFICIENT_input_slider_mobile', 'OXYGEN_DIFFUSION_COEFFICIENT_input_slider', 'OXYGEN_DIFFUSION_COEFFICIENT_amount')" />
+                                        </div>
+                                    </div>
+                                </div>
+                              </form>
+                          </div>
+  
+                          <div class="row">
+                              <form class="col-12">
+                                <a data-toggle="collapse" href="#DIFFUSION_STEPS_PER_TIME_STEP_collapse" role="button" aria-expanded="true" aria-controls="DIFFUSION_STEPS_PER_TIME_STEP_collapse"><label for="DIFFUSION_STEPS_PER_TIME_STEP_input_slider" class="input_label">Diffusion Steps Per Time Step</label></a>
+                                  <input id="DIFFUSION_STEPS_PER_TIME_STEP_input_slider" class="input_slider" type="range" value="100" min="0" max="1000" oninput="updateForm('DIFFUSION_STEPS_PER_TIME_STEP_input_slider', 'DIFFUSION_STEPS_PER_TIME_STEP_amount', 'DIFFUSION_STEPS_PER_TIME_STEP_input_slider_mobile')" />
+                                  <input id="DIFFUSION_STEPS_PER_TIME_STEP_amount" class="input_numeric_val" type="number" value="100" min="0" max="1000" oninput="updateForm('DIFFUSION_STEPS_PER_TIME_STEP_amount', 'DIFFUSION_STEPS_PER_TIME_STEP_input_slider', 'DIFFUSION_STEPS_PER_TIME_STEP_input_slider_mobile')" />
+
+                                  <div class="collapse dropdown_bubble" id="DIFFUSION_STEPS_PER_TIME_STEP_collapse">
+                                    <div class="arrow_up"></div>
+                                    <div class="info_block">
+                                        <p> Rate at which diffusion is calculated relative to rest of model </p>
+                                        <div class="mobile_slider">
+                                            <hr>
+                                            <input id="DIFFUSION_STEPS_PER_TIME_STEP_input_slider_mobile" class="input_slider_mobile" type="range" value="100" min="0" max="1000" oninput="updateForm('DIFFUSION_STEPS_PER_TIME_STEP_input_slider_mobile', 'DIFFUSION_STEPS_PER_TIME_STEP_input_slider', 'DIFFUSION_STEPS_PER_TIME_STEP_amount')" />
+                                        </div>
+                                    </div>
+                                </div>
+                              </form>
+                          </div>
+  
+                          
+                      </div>
+                  </div>
+                </div>
+              </div>
+   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
