@@ -2,10 +2,6 @@
   .card{
       margin-bottom: 20px;
   }
-  .card-header{
-      height: 50px;
-  }
-
   #header_1:hover {
     background-color: #C0C0C0;
     opacity: .7;
